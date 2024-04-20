@@ -106,11 +106,20 @@ const Row = styled.div`
   font-size: 1rem;
   display: flex;
   justify-content: space-between;
+  
+  
+
 `;
 
 const Name = styled.h3`
   font-weight: ${WEIGHTS.medium};
   color: var(--color-gray-900);
+  transition:transform 500ms;
+
+  &:hover{
+    transform:translateX(40px);
+
+  }
 `;
 
 const Price = styled.span`

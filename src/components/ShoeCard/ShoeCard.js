@@ -73,15 +73,33 @@ const Link = styled.a`
   color: inherit;
 `;
 
-const Wrapper = styled.article``;
+const Wrapper = styled.article`
+position: relative;
+`;
 
 const ImageWrapper = styled.div`
-  position: relative;
+  
+  overflow:hidden;
+  display: flex;
+  align-items: center;
+  border-radius: 16px 16px 4px 4px;
 `;
 
 const Image = styled.img`
   width: 100%;
-  border-radius: 16px 16px 4px 4px;
+  transition:transform 550ms;
+  transform-origin: 50% 70%;
+  will-change:transform;
+  
+  @media (hover:hover) and (prefers-reduced-motion:no-preference){
+    &:hover
+    , &:focus{
+      transform:scale(1.1);
+      transition:transform 250ms;
+    }
+  }
+ 
+
 `;
 
 const Row = styled.div`
